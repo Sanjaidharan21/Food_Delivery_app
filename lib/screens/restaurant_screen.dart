@@ -146,7 +146,7 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
             "price": "₹249",
             "desc": "Traditional chicken biryani",
             "image":
-                "https://images.unsplash.com/photo-1633945274405-b6c8069047b0?w=400"
+                "https://unsplash.com/photos/white-ceramic-bowl-with-green-leaf-2hpTXgfy6pg"
           },
           {
             "name": "Mutton Biryani",
@@ -167,14 +167,14 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
             "price": "₹169",
             "desc": "Healthy veg biryani",
             "image":
-                "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=400"
+                "https://unsplash.com/photos/pasta-dish-on-white-ceramic-plate-n1z3gc9gJ8I"
           },
           {
             "name": "Chicken 65",
             "price": "₹199",
             "desc": "Spicy chicken starter",
             "image":
-                "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400"
+                "https://www.istockphoto.com/photo/fried-chicken-kebab-or-kabab-gm1265209311-370770268?utm_source=unsplash&utm_medium=affiliate&utm_campaign=srp_photos_bottom&utm_content=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Fchicken-65%3Futm_source%3Dchatgpt.com&utm_term=chicken+65%3A%3A%3A%3A4453596c-d599-4c2e-bc94-be33390fc01d"
           },
         ];
 
@@ -185,7 +185,7 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
             "price": "₹199",
             "desc": "Chef's Special",
             "image":
-                "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400"
+                "https://unsplash.com/photos/traditional-south-indian-meal-on-leaf-yCIcDyKm440"
           },
         ];
     }
