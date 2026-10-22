@@ -146,7 +146,7 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
             "price": "₹249",
             "desc": "Traditional chicken biryani",
             "image":
-                "https://unsplash.com/photos/white-ceramic-bowl-with-green-leaf-2hpTXgfy6pg"
+                "https://media.istockphoto.com/id/1345624336/photo/chicken-biriyani.jpg?s=1024x1024&w=is&k=20&c=bvTAMlq5A8Z5EhVjBn6D8eYOQS-rsuKmT9ToLkCc2Y4="
           },
           {
             "name": "Mutton Biryani",
@@ -167,14 +167,14 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
             "price": "₹169",
             "desc": "Healthy veg biryani",
             "image":
-                "https://unsplash.com/photos/pasta-dish-on-white-ceramic-plate-n1z3gc9gJ8I"
+                "https://images.unsplash.com/photo-1630409346824-4f0e7b080087?q=80&w=1246&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
           },
           {
             "name": "Chicken 65",
             "price": "₹199",
             "desc": "Spicy chicken starter",
             "image":
-                "https://www.istockphoto.com/photo/fried-chicken-kebab-or-kabab-gm1265209311-370770268?utm_source=unsplash&utm_medium=affiliate&utm_campaign=srp_photos_bottom&utm_content=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Fchicken-65%3Futm_source%3Dchatgpt.com&utm_term=chicken+65%3A%3A%3A%3A4453596c-d599-4c2e-bc94-be33390fc01d"
+                "https://media.istockphoto.com/id/1265209311/photo/fried-chicken-kebab-or-kabab.webp?a=1&b=1&s=612x612&w=0&k=20&c=k6elu7ogARiXzPbHTFtCqEg2A4HQ1w-FR0kbpM8Hc_Q="
           },
         ];
 
@@ -185,7 +185,7 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
             "price": "₹199",
             "desc": "Chef's Special",
             "image":
-                "https://unsplash.com/photos/traditional-south-indian-meal-on-leaf-yCIcDyKm440"
+                "https://images.unsplash.com/photo-1625398407796-82650a8c135f?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
           },
         ];
     }
