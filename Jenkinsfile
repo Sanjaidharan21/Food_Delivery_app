@@ -2,6 +2,10 @@
 pipeline {
     agent any
 
+    environment {
+        FLUTTER = 'C:/temp/flutter_windows_3.44.1-stable/flutter/bin/flutter.bat'
+    }
+
     stages {
         stage('Checkout') {
             steps {
@@ -11,33 +15,31 @@ pipeline {
 
         stage('Check Flutter') {
             steps {
-                bat 'git --version'
-                bat 'flutter --version'
-                bat 'flutter doctor'
+                bat '"%FLUTTER%" --version'
             }
         }
 
         stage('Install Dependencies') {
             steps {
-                bat 'flutter pub get'
+                bat '"%FLUTTER%" pub get'
             }
         }
 
         stage('Code Analysis') {
             steps {
-                bat 'flutter analyze'
+                bat '"%FLUTTER%" analyze'
             }
         }
 
         stage('Run Tests') {
             steps {
-                bat 'if exist test (flutter test) else (echo No test directory found - skipping tests)'
+                bat 'if exist test ("%FLUTTER%" test) else (echo No test directory found - skipping tests)'
             }
         }
 
         stage('Build Android APK') {
             steps {
-                bat 'flutter build apk --release'
+                bat '"%FLUTTER%" build apk --release'
             }
         }
 
