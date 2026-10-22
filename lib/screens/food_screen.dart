@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'cart_screen.dart';
 
+
 class FoodScreen extends StatefulWidget {
   final String foodName;
   final String foodPrice;

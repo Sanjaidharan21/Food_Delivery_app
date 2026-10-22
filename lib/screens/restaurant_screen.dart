@@ -99,6 +99,7 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
           },
         ];
 
+
       case "KFC":
         return [
           {
@@ -145,7 +146,7 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
             "price": "₹249",
             "desc": "Traditional chicken biryani",
             "image":
-                "https://images.unsplash.com/photo-1563379091339-03246963d96c?w=400"
+                "https://images.unsplash.com/photo-1633945274405-b6c8069047b0?w=400"
           },
           {
             "name": "Mutton Biryani",
@@ -159,7 +160,7 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
             "price": "₹179",
             "desc": "Egg dum biryani",
             "image":
-                "https://images.unsplash.com/photo-1563379091339-03246963d96c?w=400"
+                "https://images.unsplash.com/photo-1681546898018-961e2a05c6fa?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
           },
           {
             "name": "Veg Biryani",
