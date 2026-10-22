@@ -1,12 +1,13 @@
+
 import 'package:flutter/material.dart';
 
 class RestaurantScreen extends StatefulWidget {
   final String restaurantName;
 
   const RestaurantScreen({
-    Key? key,
+    super.key,
     required this.restaurantName,
-  }) : super(key: key);
+  });
 
   @override
   State<RestaurantScreen> createState() => _RestaurantScreenState();
@@ -99,7 +100,6 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
           },
         ];
 
-
       case "KFC":
         return [
           {
@@ -189,7 +189,9 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
           },
         ];
     }
-  }  @override
+  }
+
+  @override
   Widget build(BuildContext context) {
     final menu = getMenu();
 
@@ -198,7 +200,6 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
         backgroundColor: Colors.orange,
         title: Text(widget.restaurantName),
       ),
-
       bottomNavigationBar: totalItems > 0
           ? Container(
               padding: const EdgeInsets.all(10),
@@ -228,14 +229,11 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
               ),
             )
           : null,
-
       body: Padding(
         padding: const EdgeInsets.all(15),
-
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-
             Text(
               widget.restaurantName,
               style: const TextStyle(
@@ -243,39 +241,27 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
                 fontWeight: FontWeight.bold,
               ),
             ),
-
             const SizedBox(height: 8),
-
             const Row(
               children: [
-
                 Icon(
                   Icons.star,
                   color: Colors.green,
                   size: 18,
                 ),
-
                 SizedBox(width: 5),
-
                 Text("4.7"),
-
                 SizedBox(width: 20),
-
                 Icon(
                   Icons.access_time,
                   color: Colors.orange,
                   size: 18,
                 ),
-
                 SizedBox(width: 5),
-
                 Text("25 - 30 mins"),
-
               ],
             ),
-
             const SizedBox(height: 10),
-
             const Text(
               "Items Starting at ₹149",
               style: TextStyle(
@@ -283,14 +269,11 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
                 fontSize: 16,
               ),
             ),
-
             const SizedBox(height: 20),
-
             Expanded(
               child: ListView.builder(
                 itemCount: menu.length,
                 itemBuilder: (context, index) {
-
                   final food = menu[index];
 
                   return Card(
@@ -299,19 +282,15 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15),
                     ),
-
                     child: Padding(
                       padding: const EdgeInsets.all(12),
-
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-
                           Expanded(
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-
                                 Text(
                                   food["name"]!,
                                   style: const TextStyle(
@@ -319,9 +298,7 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
-
                                 const SizedBox(height: 5),
-
                                 Text(
                                   food["price"]!,
                                   style: const TextStyle(
@@ -330,25 +307,19 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
-
                                 const SizedBox(height: 8),
-
                                 Text(
                                   food["desc"]!,
                                   style: const TextStyle(
                                     color: Colors.grey,
                                   ),
                                 ),
-
                               ],
                             ),
                           ),
-
                           const SizedBox(width: 15),
-
                           Column(
                             children: [
-
                               ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: Image.network(
@@ -356,11 +327,24 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
                                   height: 90,
                                   width: 90,
                                   fit: BoxFit.cover,
+                                  errorBuilder:
+                                      (context, error, stackTrace) {
+                                    return Container(
+                                      height: 90,
+                                      width: 90,
+                                      color: Colors.grey.shade200,
+                                      alignment: Alignment.center,
+                                      child: const Icon(
+                                        Icons.restaurant,
+                                        color: Colors.grey,
+                                        size: 32,
+                                      ),
+                                    );
+                                  },
                                 ),
                               ),
-
                               const SizedBox(height: 8),
-                                                            cart.containsKey(food["name"])
+                              cart.containsKey(food["name"])
                                   ? Container(
                                       width: 100,
                                       height: 38,
@@ -373,7 +357,6 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
                                         mainAxisAlignment:
                                             MainAxisAlignment.spaceEvenly,
                                         children: [
-
                                           GestureDetector(
                                             onTap: () {
                                               decreaseItem(food["name"]!);
@@ -383,7 +366,6 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
                                               color: Colors.white,
                                             ),
                                           ),
-
                                           Text(
                                             cart[food["name"]].toString(),
                                             style: const TextStyle(
@@ -392,7 +374,6 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
                                               fontSize: 16,
                                             ),
                                           ),
-
                                           GestureDetector(
                                             onTap: () {
                                               increaseItem(food["name"]!);
@@ -402,7 +383,6 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
                                               color: Colors.white,
                                             ),
                                           ),
-
                                         ],
                                       ),
                                     )
@@ -428,10 +408,8 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
                                         ),
                                       ),
                                     ),
-
                             ],
                           ),
-
                         ],
                       ),
                     ),
@@ -439,7 +417,6 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
                 },
               ),
             ),
-
           ],
         ),
       ),
