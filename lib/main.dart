@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_app/screens/splash_screen.dart';
 import 'package:food_app/screens/cart_screen.dart';
-
 void main() {
   runApp(const HealthyBites());
 }

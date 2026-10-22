@@ -18,7 +18,6 @@ class FoodScreen extends StatefulWidget {
   @override
   State<FoodScreen> createState() => _FoodScreenState();
 }
-
 class _FoodScreenState extends State<FoodScreen> {
   int quantity = 1;
 
